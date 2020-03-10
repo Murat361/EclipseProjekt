@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studiengaenge.StudiengaengeController">
+   <children>
+      <Pane fx:id="paneLeftBar" prefHeight="600.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="630.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="170.0" spacing="30.0">
+               <children>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewStudents" fitHeight="95.0" fitWidth="185.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/student_male_240px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewTeacher" fitHeight="95.0" fitWidth="185.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/teacher_200px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewNotes" fitHeight="95.0" fitWidth="185.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/note_240px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewErgebnisse" fitHeight="95.0" fitWidth="185.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/total_sales_240px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewCourse" fitHeight="95.0" fitWidth="185.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/syllabus_240px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+      <TableView fx:id="tableStudiengaenge" prefHeight="530.0" prefWidth="630.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="spalteStudiengang" onEditCommit="#changeColumns" prefWidth="75.0" text="Studiengang" />
+          <TableColumn fx:id="spalteFach" onEditCommit="#changeColumns" prefWidth="75.0" text="Fach" />
+        </columns>
+      </TableView>
+      <Pane fx:id="paneBottom" layoutX="170.0" layoutY="530.0" prefHeight="70.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="530.0">
+         <children>
+            <HBox fx:id="hboxBottom" alignment="CENTER" prefHeight="70.0" prefWidth="630.0" spacing="80.0">
+               <children>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewUpdate" fitHeight="70.0" fitWidth="150.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/update_left_rotation_100px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewDelete" fitHeight="70.0" fitWidth="150.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/delete_64px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="panes" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="imageViewAdd" fitHeight="70.0" fitWidth="150.0" onMouseClicked="#mouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/Murat/Desktop/Programmierung/JavaWiederholung/MySQL_StudenManagementSystem/src/img/add_64px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
